@@ -1,0 +1,143 @@
+* {
+    /* font-family: century; */
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: red;
+    border-radius: 6px;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-track-piece:start {
+    margin-top: 14px;
+}
+
+::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 14px;
+}
+
+.main {
+    font-size: clamp(20px, 1.5vw, 50px);
+    background-color: rgb(29, 65, 113);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0%;
+    min-height: 100vh;
+    padding: 20vh 0;
+}
+
+.head {
+    
+    padding: 20vh;
+}
+
+.heading {
+    color: #ffeae7;
+    display: flexbox;
+    font-size: larger;
+}
+
+.listspace {
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    width: 60vw;
+    border-radius: 20px;
+    background-color: #faf9f9;
+    min-height: 40vh;
+    padding: 4vh;
+    overflow: hidden;
+    margin: 5vh 15%;
+}
+
+.index .listspace {
+    overflow-y:auto;
+    height: 40vh;
+
+}
+
+.index button {
+    /* margin-top: 5%; */
+    width: min(25%, 500px);
+    border: 2px solid black;
+    border-radius: 999px;
+    font-size: min(2vh, 50px);
+    text-wrap: balance;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+}
+
+
+.addTask button {
+    margin-top: 5%;
+    height: 8vh;
+    width: min(25%, 500px);
+    border: 2px solid black;
+    border-radius: 999px;
+    font-size: min(2vh, 50px);
+    text-wrap: balance;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #f0ca72;
+    color: maroon;
+}
+
+#task-box {
+    background: white;
+    font-size: clamp(14px, 1.5vw, 20px);
+    height: clamp(20px, 3vw, 80px);
+    text-align: center;
+    border-color: black;
+    width: max(30vh, 70%);
+}
+
+.priority,
+.category,
+.due-box {
+    padding-bottom: 0;
+    padding-top: 3%;
+    font-size: clamp(18px, 2vw, 22px);
+    
+}
+
+input,
+select {
+    height: clamp(20px, 2vw, 80px);
+}
+
+.listspace > input {
+    margin: 1vh;
+}
+
+.buttons {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+input[type = "checkbox"]{
+    vertical-align: middle;
+    /* border-radius: 0%; */
+}
+
+input[type = "checkbox"]:checked +label {
+    text-decoration: line-through;
+}

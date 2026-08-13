@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Add Task</title>
+    </head>
+    <body class = "addTask">
+        <div class="main">
+            <div class="heading" id = "heading">
+                <b>ADD TASK</b>
+            </div>
+            <div class="listspace" id = "listspace">
+                <input type="text" placeholder="Enter Task" id="task-box">
+                <div class="priority">
+                    Select Task Priority: 
+                    <select name="priority" id="priority">
+                        <option value="1">Low</option>
+                        <option value="2">Medium</option>
+                        <option value="3">High</option>
+                    </select>
+                </div>
+                <div class="category">
+                    Select Task Category: 
+                    <select name="category" id="category">
+                        <option value="1">Home</option>
+                        <option value="2">Work</option>
+                        <option value="3">School/College</option>
+                </select>
+            </div>
+            <div class="due-box">
+                Select Task Due Date
+                <input type="date" name="due" id="due" value="2026-07-27">
+                
+            </div>
+            <button onclick="window.location='index.html'">View Tasks</button>
+            <button onclick="addTask()">Add</button>
+
+        </div>
+        
+    </div>
+    
+    
+    
+    <script src="scripts.js" defer></script>
+</body>
+</html>

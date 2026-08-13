@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>To-do</title>
+</head>
+    <script src="scripts.js" defer>
+        document.addEventListener("DOMContentLoaded", ()=> {
+        refresh()}
+)
+    </script>
+
+<body class="index">
+    <div class="main">
+        <div class="heading" id="heading">
+            <b>TODO</b>
+        </div>
+        <div class="listspace" id="listspace">
+            Nothing to see here...
+            <br>
+
+            Here are two things you may do
+            <br>
+            <br>
+            <p>&bull; Press "Refresh" if you already added your tasks in current or previous sessions. </p>
+            <br>
+            &bull; Press "Add New Task" if you have not yet created your tasks.
+        </div>
+
+        <div class="buttons">
+            <button onclick="refresh()">Refresh Tasks</button>
+            <button onclick="window.location='addTask.html'">Add New Task</button>
+            <button onclick="deleteCompletedTasks()">Delete Completed Tasks</button>
+        </div>
+    </div>
+</body>
+
+</html>
