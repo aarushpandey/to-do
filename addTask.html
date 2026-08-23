@@ -8,11 +8,19 @@
     </head>
     <body class = "addTask">
         <div class="main">
+            <nav>
+        <div class="nav">
+            <div onclick="window.location='index.html'">Home</div>
+            <div onclick="window.location='addTask.html'">Add Task</div>
+            <div>Guide</div>
+            <div>Contact</div>
+        </div>
+    </nav>
             <div class="heading" id = "heading">
                 <b>ADD TASK</b>
             </div>
             <div class="listspace" id = "listspace">
-                <input type="text" placeholder="Enter Task" id="task-box">
+                <input type="text" autofocus placeholder="Enter Task" id="task-box">
                 <div class="priority">
                     Select Task Priority: 
                     <select name="priority" id="priority">
@@ -35,7 +43,7 @@
                 
             </div>
             <button onclick="window.location='index.html'">View Tasks</button>
-            <button onclick="addTask()">Add</button>
+            <button onclick="addTask()" id="add">Add</button>
 
         </div>
         

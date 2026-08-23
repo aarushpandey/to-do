@@ -1,8 +1,7 @@
 * {
-    /* font-family: century; */
     margin: 0;
-    overflow: hidden;
     padding: 0;
+    overflow: hidden;
     text-align: center;
 }
 
@@ -11,7 +10,7 @@
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: red;
+    background-color: #8b8f95;
     border-radius: 6px;
     background-clip: content-box;
 }
@@ -26,8 +25,8 @@
 
 .main {
     font-size: clamp(20px, 1.5vw, 50px);
-    background-color: rgb(29, 65, 113);
-    text-align: center;
+    background-color: rgb(47, 17, 0);
+    text-align: left;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,9 +41,13 @@
 }
 
 .heading {
-    color: #ffeae7;
-    display: flexbox;
-    font-size: larger;
+    font-size: clamp(30px, 2.5vw, 60px);
+
+    color: #F5EBE0;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2vh;
 }
 
 .listspace {
@@ -53,14 +56,17 @@
     border-style: solid;
     width: 60vw;
     border-radius: 20px;
-    background-color: #faf9f9;
+    background-color: #F5EBE0;
     min-height: 40vh;
     padding: 4vh;
     overflow: hidden;
-    margin: 5vh 15%;
+    margin: 2vh;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    font-size: clamp(12px, 1.6vw, 120px);
 }
 
 .index .listspace {
+    text-align: left;
     overflow-y:auto;
     height: 40vh;
 
@@ -71,20 +77,30 @@
     width: min(25%, 500px);
     border: 2px solid black;
     border-radius: 999px;
-    font-size: min(2vh, 50px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    font-size: clamp(12px, 1vw, 100px);
     text-wrap: balance;
     cursor: pointer;
     display: flex;
     justify-content: center;
+    transition: all 0.2s ease-in-out;
     align-items: center;
     height: 8vh;
+    background-color: #F5EBE0;
+    margin: 2vh;
 }
 
+.index button:hover, .addTask button:hover {
+    background-color: #f0ca72;
+    transform: translateY(-2px); 
+}
 
 .addTask button {
+    transition: all 0.2s ease-in-out;
     margin-top: 5%;
     height: 8vh;
     width: min(25%, 500px);
+    background-color: #F5EBE0;
     border: 2px solid black;
     border-radius: 999px;
     font-size: min(2vh, 50px);
@@ -129,15 +145,83 @@ select {
     display: flex;
     flex-direction: row;
     align-items: center;
+    transition: all 0.2s ease-in-out;
     justify-content: center;
     
 }
 
 input[type = "checkbox"]{
     vertical-align: middle;
-    /* border-radius: 0%; */
+    transform: scale(1);
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
 }
 
-input[type = "checkbox"]:checked +label {
+input[type = "checkbox"]:checked +label{
     text-decoration: line-through;
 }
+
+
+nav {
+    /* background-color: #f0ca72; */
+    width: 100%;
+    top: 0;
+    color: black;
+    position: absolute;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.nav div {
+    margin: 2vw;
+    padding: 0.5vw;
+    height: clamp(40px, 2vh, 60px);
+    align-content: center;
+    color: #F5EBE0;
+    border: 1px solid #F5EBE0;
+    border-radius: 12px;
+}
+
+.nav div:hover {
+    background-color: #512c02;
+    cursor: pointer;
+    
+}
+
+.task_div {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+.task_label_and_check{
+    text-align: left;
+    overflow: auto;
+    width: 40%;
+}
+
+.task_label_and_check label{
+    margin: 0.5vw;
+}
+
+.task_div label {
+    text-align: left;
+    
+}
+
+.task_div .due{
+    /* overflow: auto; */
+    align-self: center;
+    text-align: center;
+    width: 40%;
+}
+

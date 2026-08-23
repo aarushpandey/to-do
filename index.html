@@ -7,35 +7,40 @@
     <link rel="stylesheet" href="styles.css">
     <title>To-do</title>
 </head>
-    <script src="scripts.js" defer>
-        document.addEventListener("DOMContentLoaded", ()=> {
-        refresh()}
-)
-    </script>
-
 <body class="index">
+
     <div class="main">
+    <nav>
+        <div class="nav">
+            <div onclick="window.location='index.html'">Home</div>
+            <div onclick="window.location='addTask.html'">Add Task</div>
+            <div>Guide</div>
+            <div>Contact</div>
+        </div>
+    </nav>
+
         <div class="heading" id="heading">
-            <b>TODO</b>
+            <b>TO-DO LIST</b>
         </div>
         <div class="listspace" id="listspace">
             Nothing to see here...
             <br>
-
+            
             Here are two things you may do
             <br>
             <br>
-            <p>&bull; Press "Refresh" if you already added your tasks in current or previous sessions. </p>
+            &bull; Press "Refresh" if you already added your tasks in current or previous sessions.
             <br>
             &bull; Press "Add New Task" if you have not yet created your tasks.
         </div>
-
+        
         <div class="buttons">
             <button onclick="refresh()">Refresh Tasks</button>
             <button onclick="window.location='addTask.html'">Add New Task</button>
             <button onclick="deleteCompletedTasks()">Delete Completed Tasks</button>
         </div>
     </div>
+    <script src="scripts.js" ></script>
 </body>
 
 </html>
